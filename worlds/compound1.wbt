@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.36018310136419635 0.9194697000579558 0.15761854004844114 5.394765398497608
-  position -1.6310286232598155 1.0009285613381984 1.384032997108108
+  orientation 0.35067285650972263 0.9292902754143462 0.11596608007361606 5.599416357467615
+  position -0.9429830526749658 0.7180237814354312 1.2942519969352533
 }
 TexturedBackground {
 }
@@ -11,7 +11,7 @@ TexturedBackgroundLight {
 }
 Floor {
 }
-Solid {
+DEF Cube_ Solid {
   translation 0 0.3 0
   children [
     DEF GR_FRAME Group {
@@ -107,6 +107,52 @@ Solid {
         }
         Transform {
           translation 0 -0.15 -0.15
+          rotation 1 0 0 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.15 0.15 -0.3
+          rotation 0 0 1 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.3 0.15 -0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.15 -0.15 -0.3
+          rotation 0 0 1 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.3 -0.15 -0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.3 0 -0.3
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.3 0.15 -0.15
+          rotation 1 0 0 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.3 -0.15 -0.15
           rotation 1 0 0 1.5708
           children [
             USE SH_CYLINDER
