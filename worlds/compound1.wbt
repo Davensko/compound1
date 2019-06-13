@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.6115434323231931 0.7740507797417024 0.1638902704971558 0.6272004888108437
-  position 0.4863427762686524 0.6950883396382759 1.0977016288590875
+  orientation 0.36018310136419635 0.9194697000579558 0.15761854004844114 5.394765398497608
+  position -1.6310286232598155 1.0009285613381984 1.384032997108108
 }
 TexturedBackground {
 }
@@ -12,11 +12,11 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation -0.009111264100361005 0.2600000000000001 0.09708664619703145
+  translation 0 0.3 0
   children [
     DEF GR_FRAME Group {
       children [
-        Shape {
+        DEF SH_CYLINDER Shape {
           appearance PBRAppearance {
             baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
             roughness 1
@@ -30,7 +30,7 @@ Solid {
         Transform {
           translation 0 0.15 0
           children [
-            Shape {
+            DEF SH_SPHERE Shape {
               appearance PBRAppearance {
                 baseColor 0.8 0 0
                 roughness 1
@@ -40,6 +40,76 @@ Solid {
                 radius 0.05
               }
             }
+          ]
+        }
+        Transform {
+          translation 0 -0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.15 -0.15 0
+          rotation 0 0 -1 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.3 -0.15000000000000002 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.3 0 0
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0.3 0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.15 0.15 0
+          rotation 0 0 1 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0 0.15 -0.15
+          rotation 1 0 0 1.5708
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0 0.15 -0.30000000000000004
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0 0 -0.3
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        Transform {
+          translation 0 -0.15 -0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0 -0.15 -0.15
+          rotation 1 0 0 1.5708
+          children [
+            USE SH_CYLINDER
           ]
         }
       ]
